@@ -1,0 +1,10 @@
+chat_ui:
+  js:
+    libraries/marked/marked.min.js: { minified: true }
+    js/chat.js: {}
+  css:
+    theme:
+      css/chat.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

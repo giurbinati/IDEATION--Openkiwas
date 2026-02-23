@@ -1,0 +1,14 @@
+name: Feeds XLSX
+type: module
+description: Add Xlsx parser plugin for feeds.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Feeds
+dependencies:
+  - drupal:system (>=8.5.0)
+  - feeds:feeds
+
+# Information added by Drupal.org packaging script on 2023-07-21
+version: '1.0.0'
+project: 'feeds_xlsx'
+datestamp: 1689944626

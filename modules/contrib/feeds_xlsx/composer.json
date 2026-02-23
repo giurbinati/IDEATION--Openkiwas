@@ -1,0 +1,19 @@
+{
+    "name": "drupal/feeds_xlsx",
+    "type": "drupal-module",
+    "description": "Add Xlsx parser plugin for feeds.",
+    "keywords": ["Drupal", "feeds", "xlsx", "parser"],
+    "homepage": "http://drupal.org/project/feeds_xlsx",
+    "license": "GPL-2.0-or-later",
+    "support": {
+      "issues": "http://drupal.org/project/issues/feeds_xlsx",
+      "source": "http://git.drupalcode.org/feeds_xlsx"
+    },
+    "require": {
+        "drupal/feeds": "~3.0",
+        "drupal/core": "^8 || ^9 || ^10"
+    },
+    "require-dev": {
+        "drupal/feeds": "3.x-dev"
+    }
+}

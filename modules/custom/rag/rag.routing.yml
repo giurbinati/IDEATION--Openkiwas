@@ -1,0 +1,17 @@
+rag.chat_proxy:
+  path: '/rag/chat'
+  defaults:
+    _controller: 'Drupal\rag\Controller\ChatProxyController::chat'
+    _title: 'Rag!!'
+  requirements:
+    _permission: 'access content'
+  methods: [POST]
+
+rag.page:
+  path: '/rag'
+  defaults:
+    _controller: 'Drupal\rag\Controller\ChatPageController::page'
+    _title: 'OpenKIWAS Chatbot'
+  requirements:
+    _permission: 'access content'
+  methods: [GET]
