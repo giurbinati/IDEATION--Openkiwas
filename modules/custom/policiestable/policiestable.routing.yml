@@ -1,0 +1,15 @@
+policiestable.page:
+  path: '/policiesandregulations'
+  defaults:
+    _form: '\Drupal\policiestable\Form\policiestableForm'
+    _title: 'Policies abd Regulations'
+  requirements:
+    _permission: 'access content'
+    
+policiestable.detail:
+  path: '/policiestable/detail/{row}'
+  defaults:
+    _controller: '\Drupal\policiestable\Controller\PoliciestableDetailController::view'
+    _title: 'Policies abd Regulations'
+  requirements:
+    _permission: 'access content'

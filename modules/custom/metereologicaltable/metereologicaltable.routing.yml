@@ -1,0 +1,15 @@
+metereologicaltable.page:
+  path: '/metereologicaldatabase'
+  defaults:
+    _form: '\Drupal\metereologicaltable\Form\MetereologicaltableForm'
+    _title: 'Metereological Database'
+  requirements:
+    _permission: 'access content'
+    
+metereologicaltable.detail:
+  path: '/metereologicaldatabase/detail/{row}'
+  defaults:
+    _controller: '\Drupal\metereologicaltable\Controller\MetereologicaltableDetailController::view'
+    _title: 'Metereological Database'
+  requirements:
+    _permission: 'access content'

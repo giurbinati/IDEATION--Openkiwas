@@ -11,7 +11,7 @@ use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 
-class opendatatable extends FormBase
+class OpendatatableForm extends FormBase
 {
 
   private const STATE_KEY_LAST_FID = 'opendatatable.last_fid';

@@ -1,0 +1,510 @@
+/* =========================
+   PALETTE IDEATION (come prima)
+   ========================= */
+:root {
+  --ideation-blue-dark: 2, 3, 129;
+  /* rgb(2,3,129) */
+  --ideation-blue-light: 40, 116, 252;
+  /* rgb(40,116,252) */
+  --ideation-gray: 64, 64, 64;
+  /* rgb(64,64,64) */
+
+  --ideation-gradient: linear-gradient(135deg,
+      rgb(var(--ideation-blue-dark)) 0%,
+      rgb(var(--ideation-blue-light)) 100%);
+}
+
+/* Centra il titolo della pagina (Drupal Olivero) */
+/* CENTRA DAVVERO il titolo pagina in Olivero */
+.page-title,
+h1.page-title {
+  display: block;
+  margin-bottom: 3rem !important; /* prima era molto più grande */
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* Olivero: a volte il titolo sta dentro container con padding/limiti */
+.region-content .page-title,
+.main-content__container .page-title {
+  text-align: center !important;
+}
+
+/* =========================
+   WRAPPER
+   ========================= */
+.viewscss {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* filtro sopra */
+.viewscss .views-exposed-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* label filtro */
+.viewscss .views-exposed-form label {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgb(var(--ideation-gray));
+}
+
+.viewscss .form-item label {
+  font-size: 1.35rem !important;   /* più grande */
+  text-align: center;
+  display: block;
+}
+
+/* =========================
+   CONTENITORE TABELLA (scroll + CENTRATURA)
+   - .view-content per Views
+   - .xlsx-table-wrap per il tuo form
+   ========================= */
+/* scroll solo sulla tabella */
+.viewscss .xlsx-table-wrap {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   TABELLA
+   - .views-table se la aggiungi dal PHP
+   - .responsive-enabled è quella di Drupal tableresponsive
+   ========================= */
+.viewscss table.views-table,
+.viewscss table.responsive-enabled {
+  min-width: 1200px;
+  width: 100%;
+  /* chiave per centrarla nello scroll */
+  margin: 0 auto;
+  /* centrata */
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.viewscss table.views-table thead th,
+.viewscss table.responsive-enabled thead th {
+  background: rgb(var(--ideation-blue-dark)) !important;
+  color: #fff !important;
+  text-align: left;
+  padding: 12px 16px !important;
+  border-bottom: 2px solid rgba(var(--ideation-blue-light), 0.55);
+  white-space: nowrap;
+}
+
+/* link header tabella = bianchi */
+.viewscss table.views-table thead th a,
+.viewscss table.views-table thead th a:hover,
+.viewscss table.views-table thead th a:focus,
+.viewscss table.responsive-enabled thead th a,
+.viewscss table.responsive-enabled thead th a:hover,
+.viewscss table.responsive-enabled thead th a:focus {
+  color: #ffffff !important;
+}
+
+/* LINK prima colonna (titolo cliccabile) */
+.viewscss table.views-table tbody td:first-child a,
+.viewscss table.responsive-enabled tbody td:first-child a {
+  color: rgb(var(--ideation-blue-dark));
+}
+
+/* CELLE (fix spazio enorme tra header e prima riga) */
+.viewscss table.views-table td,
+.viewscss table.responsive-enabled td {
+  padding: 10px 14px !important;
+  /* più compatto */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  vertical-align: middle !important;
+  /* evita righe “alte” */
+  color: rgb(var(--ideation-gray));
+  line-height: 1.25 !important;
+  /* più compatto */
+  height: auto !important;
+
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* evita che elementi interni aggiungano margini/padding */
+.viewscss table.views-table td>*,
+.viewscss table.responsive-enabled td>* {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: inherit !important;
+}
+
+/* righe alternate */
+.viewscss table.views-table tbody tr:nth-child(even) td,
+.viewscss table.responsive-enabled tbody tr:nth-child(even) td {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+/* hover riga */
+.viewscss table.views-table tbody tr:hover td,
+.viewscss table.responsive-enabled tbody tr:hover td {
+  background: rgba(var(--ideation-blue-light), 0.08) !important;
+}
+
+/* link coerenti */
+.viewscss table.views-table a,
+.viewscss table.responsive-enabled a {
+  color: rgb(var(--ideation-blue-light));
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.viewscss table.views-table a:hover,
+.viewscss table.responsive-enabled a:hover {
+  text-decoration: underline;
+  color: rgb(var(--ideation-blue-dark));
+}
+
+/* =========================
+   TITOLO VIEW (come prima)
+   ========================= */
+.viewscss h1,
+.viewscss .view-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  color: rgb(var(--ideation-blue-dark));
+}
+
+/* Titolo nodo (Layout Builder) */
+.path-node .block-field-blocknodeopen-datatitle .block__content>span {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 3rem 0 2.5rem;
+  color: rgb(var(--ideation-blue-dark));
+}
+
+/* =========================
+   BOX DESCRIZIONE (come prima)
+   ========================= */
+.openkiwas-description {
+  max-width: 980px;
+  margin: 2rem auto 1.2rem auto;
+  padding: 1.6rem 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(var(--ideation-gray), 0.14);
+  border-radius: 18px;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.openkiwas-description p {
+  margin: 0.7rem 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgb(var(--ideation-gray));
+}
+
+.openkiwas-description p:first-child strong {
+  font-size: 1.18rem;
+  color: rgb(var(--ideation-blue-dark)) !important;
+}
+
+/* Nasconde SOLO il bottone nativo del file input */
+.xlsx-hidden-input input[type="file"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* Layout bottone + nome file */
+.xlsx-upload-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0.75rem 0 0.25rem;
+  flex-wrap: wrap;
+}
+
+/* Bottone custom (stile wp3) */
+.xlsx-upload-label {
+  background: #fff !important;
+  color: rgb(var(--ideation-blue-dark)) !important;
+  border: 2px solid rgba(var(--ideation-blue-dark), 0.35) !important;
+  border-radius: 14px !important;
+  padding: 0.85rem 1.2rem !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease,
+    background-color .15s ease, color .15s ease;
+}
+
+.xlsx-upload-label:hover {
+  transform: translateY(-2px);
+  background: var(--ideation-gradient) !important;
+  border-color: rgba(var(--ideation-blue-light), 0.95) !important;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10) !important;
+  color: #fff !important;
+}
+
+.xlsx-upload-label:active {
+  transform: translateY(-1px);
+}
+
+.xlsx-filename {
+  color: rgb(var(--ideation-gray));
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* =========================
+   CENTER FORM (UPLOAD AREA)
+   ========================= */
+.viewscss form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.viewscss .form-item {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* label centrati */
+.viewscss .form-item label {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgb(var(--ideation-gray));
+}
+
+/* input centrati */
+.viewscss input[type="number"],
+.viewscss input[type="file"] {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================
+   WP3 BUTTON (solo colore + forma)
+   ========================= */
+.viewscss .wp3-btn {
+  background: #fff !important;
+  color: rgb(var(--ideation-blue-dark)) !important;
+  border: 2px solid rgba(var(--ideation-blue-dark), 0.35) !important;
+  border-radius: 14px !important;
+
+  padding: 1rem 2rem !important;
+  min-height: auto !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.25 !important;
+
+  background-image: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+
+  transition: transform .15s ease, border-color .15s ease,
+    box-shadow .15s ease, background-color .15s ease, color .15s ease;
+}
+
+.viewscss .wp3-btn:hover {
+  transform: translateY(-3px);
+  background: var(--ideation-gradient) !important;
+  border-color: rgba(var(--ideation-blue-light), 0.95) !important;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10) !important;
+  color: #fff !important;
+}
+
+.viewscss .wp3-btn:active {
+  transform: translateY(-1px);
+}
+
+.viewscss .wp3-btn:focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 4px rgba(var(--ideation-blue-light), 0.22),
+    0 10px 22px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* Centra le descrizioni dei campi (la frase sotto il file upload) */
+.viewscss .description {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  font-size: 1.1rem !important;    
+  /* opzionale: evita che sia troppo lunga */
+}
+
+/* =========================
+   LAYOUT CONTENT (come prima)
+   ========================= */
+.main-content,
+.region-content,
+.main-content__container {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER (come tuo)
+   ========================= */
+footer.site-footer .region-footer,
+footer.site-footer .site-footer__inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+}
+
+footer.site-footer .copyright-text {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+footer.site-footer .copyright-text img {
+  height: 28px !important;
+  width: auto !important;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+footer.site-footer {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  margin: 0 !important;
+}
+
+footer.site-footer .site-footer__inner,
+footer.site-footer .region-footer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+footer.site-footer .copyright-text {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+  margin-top: 36px !important;
+}
+
+footer.site-footer .license-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* SOLO l’area del branding (logo) */
+#block-olivero-site-branding,
+#block-olivero-site-branding .site-branding__inner,
+#block-olivero-site-branding .site-branding__logo {
+  background: rgb(var(--ideation-blue-dark)) !important;
+  background-image: none !important;
+}
+
+/* evita spazi strani inline */
+#block-olivero-site-branding .site-branding__logo img {
+  display: block;
+}
+
+.site-header__initial {
+  background-color: rgba(var(--ideation-blue-dark), 0.75);
+}
+
+/* quando diventa sticky */
+.site-header.is-sticky .site-header__initial {
+  background-color: rgba(var(--ideation-blue-dark), 0.75);
+}
+
+/* Pannello/menu mobile a sinistra (overlay) */
+.mobile-nav,
+.mobile-nav__content,
+.mobile-nav__overlay {
+  background-color: rgba(var(--ideation-blue-dark), 0.75) !important;
+  background-image: none !important;
+}
+
+/* area del bottone X/hamburger */
+.mobile-nav-button,
+.mobile-nav-button__label,
+.sticky-header-toggle {
+  background-color: transparent !important;
+}
+
+/*css for search filter table*/
+.viewscss .xlsx-search {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 1rem auto;
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid rgba(var(--ideation-blue-dark), 0.25);
+  font-size: 1.05rem;
+}
+
+.viewscss .xlsx-search:focus {
+  outline: none;
+  border-color: rgba(var(--ideation-blue-light), 0.9);
+  box-shadow: 0 0 0 4px rgba(var(--ideation-blue-light), 0.18);
+}
+
+.openkiwas-description {
+  max-width: 980px;
+  margin: 2rem auto 1.2rem auto;
+  padding: 1.6rem 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(var(--ideation-gray), 0.14);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+}
+
+.openkiwas-description p {
+  margin: 0.7rem 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgb(var(--ideation-gray));
+}

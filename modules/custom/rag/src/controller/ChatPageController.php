@@ -12,7 +12,7 @@ class ChatPageController extends ControllerBase
     return [
       '#markup' => '
       <h1 class="rag-page-title">OpenKIWAS Chatbot</h1>
-      <div id="openkiwas-chat" data-endpoint="/openkiwas-final-version/rag/chat"></div>',
+      <div id="openkiwas-chat" data-endpoint="/rag/chat""></div>',
       '#attached' => [
         'library' => ['rag/chat_ui'],
       ],

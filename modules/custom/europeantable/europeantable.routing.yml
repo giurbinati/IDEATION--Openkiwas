@@ -1,0 +1,15 @@
+europeantable.page:
+  path: '/europeanfundendprojects'
+  defaults:
+    _form: '\Drupal\europeantable\Form\EuropeantableForm'
+    _title: 'European Fundend Projects'
+  requirements:
+    _permission: 'access content'
+    
+europeantable.detail:
+  path: '/europeanfundendprojects/detail/{row}'
+  defaults:
+    _controller: '\Drupal\europeantable\Controller\EuropeantableDetailController::view'
+    _title: 'European Fundend Projects'
+  requirements:
+    _permission: 'access content'

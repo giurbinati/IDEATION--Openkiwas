@@ -1,0 +1,15 @@
+scientifictable.page:
+  path: '/scientificresults'
+  defaults:
+    _form: '\Drupal\scientifictable\Form\ScientifictableForm'
+    _title: 'Scientific Results'
+  requirements:
+    _permission: 'access content'
+    
+scientifictable.detail:
+  path: '/scientificresults/detail/{row}'
+  defaults:
+    _controller: '\Drupal\scientifictable\Controller\ScientifictableDetailController::view'
+    _title: 'Scientific Results'
+  requirements:
+    _permission: 'access content'

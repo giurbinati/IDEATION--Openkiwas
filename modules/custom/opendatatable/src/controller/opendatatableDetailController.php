@@ -7,7 +7,7 @@ use Drupal\file\Entity\File;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 
-class opendatatableDetailController extends ControllerBase
+class OpendatatableDetailController extends ControllerBase
 {
 
   private const STATE_KEY_LAST_FID = 'opendatatable.last_fid';

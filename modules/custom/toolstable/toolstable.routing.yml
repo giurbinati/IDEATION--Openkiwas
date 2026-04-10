@@ -1,0 +1,15 @@
+toolstable.page:
+  path: '/toolsandtechnologies'
+  defaults:
+    _form: '\Drupal\toolstable\Form\ToolstableForm'
+    _title: 'Tools and Technologies'
+  requirements:
+    _permission: 'access content'
+    
+toolstable.detail:
+  path: '/toolsandtechnologies/detail/{row}'
+  defaults:
+    _controller: '\Drupal\toolstable\Controller\ToolstableDetailController::view'
+    _title: 'Tools and Technologies'
+  requirements:
+    _permission: 'access content'

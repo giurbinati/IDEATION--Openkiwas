@@ -1,7 +1,7 @@
 opendatatable.page:
   path: '/opendataandsensingresource'
   defaults:
-    _form: '\Drupal\opendatatable\Form\opendatatableForm'
+    _form: '\Drupal\opendatatable\Form\OpendatatableForm'
     _title: 'Open Data and Sensing Resource'
   requirements:
     _permission: 'access content'
@@ -9,7 +9,7 @@ opendatatable.page:
 opendatatable.detail:
   path: '/opendataandsensingresource/detail/{row}'
   defaults:
-    _controller: '\Drupal\opendatatable\Controller\opendatatableDetailController::view'
+    _controller: '\Drupal\opendatatable\Controller\OpendatatableDetailController::view'
     _title: 'Open Data and Sensing Resource'
   requirements:
     _permission: 'access content'

@@ -1,0 +1,46 @@
+/* =========================
+   TITOLO PAGINA DETTAGLIO
+   (Open Data and Sensing Resource)
+   ========================= */
+
+/* Targeta l'H1 della pagina dettaglio */
+.page-title,
+h1.page-title {
+  color: rgb(var(--ideation-blue-dark)) !important; /* blu scuro */
+  white-space: nowrap;          /* forza UNA SOLA LINEA */
+  text-align: center;           /* centrato come ora */
+  font-size: 3rem;              /* opzionale, coerente */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+
+/* Se il titolo è dentro la regione content (Olivero) */
+.region-content h1 {
+  color: rgb(var(--ideation-blue-dark)) !important;
+  white-space: nowrap;
+}
+
+.xlsx-detail-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.opendatatable-detail {
+  list-style: none;
+  padding: 0;
+}
+
+.xlsx-detail-row {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgb(var(--ideation-gray));
+}
+
+.xlsx-detail-row strong {
+  color: rgb(var(--ideation-blue-dark));
+  font-size: 1.15rem;
+}

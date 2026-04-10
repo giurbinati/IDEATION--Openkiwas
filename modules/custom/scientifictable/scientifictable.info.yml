@@ -1,0 +1,5 @@
+name: scientifictable
+type: module
+description: dynamic table.
+core_version_requirement: ^10 || ^11
+package: Custom
